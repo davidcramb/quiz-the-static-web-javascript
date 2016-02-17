@@ -18,11 +18,14 @@ function tree () {
   makeTree.height = parseInt(height.value);
   makeTree.character = type.value;
   var char = makeTree.character;
-  var space = [' '];
+  var space = ' ';
+  var treeString = char.repeat(2);
   
-  for (var i = 0; i < makeTree.height; i++) {
-    var treeString = char.repeat(2);
-    console.log(treeString.repeat(i+1))
+  for (var i = 1; i < makeTree.height +1; i++) {
+    char += treeString;
+    var printString = char.slice(0, char.length -2);
+    console.log(printString)
+
   };
 };
 
