@@ -24,12 +24,8 @@ function tree () {
   for (var i = 1; i < makeTree.height +1; i++) {
     char += treeString;
     var printString = char.slice(0, char.length -2);
-    console.log(printString);
-      for (var j = makeTree.height; j > makeTree.height -1; j--) {
-        makeTree.height = j
-        console.log('height', j)
-        // console.log(j)
-      };
+    console.log(space.repeat(makeTree.height - i) + printString);
+
   };
 };
 
